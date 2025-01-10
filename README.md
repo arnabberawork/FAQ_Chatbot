@@ -1,4 +1,4 @@
-# Novanecter FAQ Chatbot
+# Novanectar FAQ Chatbot
 
 This repository contains the source code for an intelligent FAQ chatbot application designed to understand and respond to user queries. The system uses a combination of spaCy for natural language processing, WordNet for synset-based intent matching, and Hugging Face Transformers for paraphrasing. The app is built using Flask as the web framework to provide a simple API for interacting with the chatbot.
 
@@ -19,7 +19,7 @@ This repository contains the source code for an intelligent FAQ chatbot applicat
 
 ## Problem Statement
 
-Novanecter receives a large number of frequently asked questions from users. Manually responding to these queries is time-consuming and inefficient. There is a need for an automated system that can understand user queries and provide accurate responses in real-time.
+Novanectar receives a large number of frequently asked questions from users. Manually responding to these queries is time-consuming and inefficient. There is a need for an automated system that can understand user queries and provide accurate responses in real-time.
 
 ## Objectives
 
@@ -29,7 +29,7 @@ Novanecter receives a large number of frequently asked questions from users. Man
 
 ## Approach
 
-The Novanecter FAQ Chatbot is designed to automate the process of answering frequently asked questions. The chatbot uses NLP techniques to understand user queries and match them to predefined intents. Based on the matched intent, the chatbot provides an appropriate response. The system is built using Flask for the web interface, spaCy and NLTK for NLP, and the Hugging Face Transformers library for enhancing intent matching through paraphrase generation.
+The Novanectar FAQ Chatbot is designed to automate the process of answering frequently asked questions. The chatbot uses NLP techniques to understand user queries and match them to predefined intents. Based on the matched intent, the chatbot provides an appropriate response. The system is built using Flask for the web interface, spaCy and NLTK for NLP, and the Hugging Face Transformers library for enhancing intent matching through paraphrase generation.
 
 ## Technologies/Libraries Used
 
@@ -89,7 +89,7 @@ The chatbot uses spaCy for natural language processing and NLTK's WordNet for sy
 
 ## Conclusions
 
-The Novanecter FAQ Chatbot successfully automates the process of answering frequently asked questions, providing accurate and timely responses to user queries. This reduces the workload on support staff and improves user satisfaction.
+The Novanectar FAQ Chatbot successfully automates the process of answering frequently asked questions, providing accurate and timely responses to user queries. This reduces the workload on support staff and improves user satisfaction.
 
 ## Acknowledgements
 

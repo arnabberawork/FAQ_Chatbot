@@ -23,23 +23,23 @@ sentence_model = SentenceTransformer('all-MiniLM-L6-v2')
 
 # Updated FAQ database (intents and responses)
 faq_data = {
-    "what_is_novanecter": "Novanecter is a leading provider of innovative solutions in the software development.",
+    "what_is_Novanectar": "Novanectar is a leading provider of innovative solutions in the software development.",
     "services_offered": "We offer services like Web Development, App Development, SEO, Graphics Design, and Custom Software Solutions tailored to your business needs.",
     "contact_support": "You can contact support at info@novanectar.co.in or call us at +91 89798 91703.",
     "pricing_details": "For pricing details, visit our website https://novanectar.co.in/ or contact our sales team at +91 89798 91703.",
-    "service_warranty": "Novanecter offers a warranty for all services provided, including bug fixes and support for a defined period after project completion. Please contact us for specific terms.",
+    "service_warranty": "Novanectar offers a warranty for all services provided, including bug fixes and support for a defined period after project completion. Please contact us for specific terms.",
     "client_onboarding_process": "Our client onboarding process involves understanding your requirements, project scoping, team assignment, and establishing timelines. We guide you every step of the way.",
     "payment_methods": "We accept payments via bank transfers, credit cards, and online payment systems like PayPal. For more details, contact our accounts team at accounts@novanectar.co.in.",
     "project_management_tools": "We use industry-leading project management tools like Jira and Trello to ensure efficient collaboration, timely delivery, and transparent communication.",
     "post_launch_support": "We offer post-launch support, including maintenance and updates, to ensure your solution continues to perform optimally. Contact our support team for more details.",
     "client_testimonials": "Read what our clients say about us on our testimonials page at https://novanectar.co.in/testimonials.",
-    "industry_experience": "Novanecter has over a decade of experience serving clients across various industries, including e-commerce, healthcare, finance, and education.",
+    "industry_experience": "Novanectar has over a decade of experience serving clients across various industries, including e-commerce, healthcare, finance, and education.",
     "custom_solution_offering": "We specialize in custom software solutions tailored to meet the unique needs of your business. Let us know your requirements, and we'll create a solution just for you.",
     "integrations_supported": "We support integrations with popular tools and platforms like Salesforce, Shopify, Google Analytics, and more.",
     "service_level_agreement": "We provide service level agreements (SLAs) for our clients, ensuring clear expectations on response times and service delivery. Contact us for detailed SLA information.",
     "company_locations": "Our offices are located in Dehradun, India. Please visit our contact page website https://novanectar.co.in/ for more information.",
     "business_hours": "Our business hours during the holidays are from 9 AM to 6 PM, Monday through Friday.",
-    "csr_initiatives": "Novanecter is committed to sustainability and engages in initiatives that support education and environmental efforts.",
+    "csr_initiatives": "Novanectar is committed to sustainability and engages in initiatives that support education and environmental efforts.",
     "partnerships": "Yes, we are always looking for new business partnerships. Please reach out to our business development team for more information.",
     "job_openings": "Please check our careers page for the latest job openings and application details.",
     "b2b_services": "Yes, we offer enterprise-level solutions and services tailored to the specific needs of businesses across various industries.",
@@ -51,14 +51,14 @@ faq_data = {
 
 # Updated Sample phrases for intent matching
 intent_phrases = {
-    "what_is_novanecter": [
-        "What is Novanecter?",
-        "Tell me about Novanecter.",
-        "What does Novanecter do?",
-        "Can you explain Novanecter?",
-        "Who is Novanecter?",
-        "What type of company is Novanecter?",
-        "What services does Novanecter provide?"
+    "what_is_Novanectar": [
+        "What is Novanectar?",
+        "Tell me about Novanectar.",
+        "What does Novanectar do?",
+        "Can you explain Novanectar?",
+        "Who is Novanectar?",
+        "What type of company is Novanectar?",
+        "What services does Novanectar provide?"
     ],
     "services_offered": [
         "What services do you offer?",
@@ -97,7 +97,7 @@ intent_phrases = {
     ],
     "client_onboarding_process": [
         "What is the client onboarding process?",
-        "How do I get started with Novanecter?",
+        "How do I get started with Novanectar?",
         "What is the process for new clients?",
         "Tell me how the onboarding process works.",
         "How do I become a client?",
@@ -138,7 +138,7 @@ intent_phrases = {
     "industry_experience": [
         "What industries do you serve?",
         "Can you tell me about your industry experience?",
-        "What industries has Novanecter worked with?",
+        "What industries has Novanectar worked with?",
         "Which industries do you have experience in?",
         "Tell me about the industries you serve.",
         "What types of businesses have you worked with?"
@@ -148,14 +148,14 @@ intent_phrases = {
         "Can you build a custom solution for my business?",
         "What custom software solutions do you offer?",
         "Tell me about your custom solution offerings.",
-        "Can Novanecter create a solution tailored to my needs?",
+        "Can Novanectar create a solution tailored to my needs?",
         "Do you offer bespoke software solutions?"
     ],
     "integrations_supported": [
         "What integrations do you support?",
         "Which platforms can you integrate with?",
         "Do you support integrations with third-party tools?",
-        "What systems can Novanecter integrate with?",
+        "What systems can Novanectar integrate with?",
         "Tell me about the integrations you support.",
         "Can you integrate with other software?"
     ],
@@ -169,10 +169,10 @@ intent_phrases = {
     ],
     "company_locations": [
         "Where are your offices located?",
-        "Where is Novanecter located?",
+        "Where is Novanectar located?",
         "Can you tell me where your headquarters are?",
         "Where can I find your office?",
-        "Where is Novanecter based?"
+        "Where is Novanectar based?"
     ],
     "business_hours": [
         "What are your business hours during the holidays?",
@@ -181,18 +181,18 @@ intent_phrases = {
     ],
     "csr_initiatives": [
         "Does your company have any corporate social responsibility initiatives?",
-        "What CSR initiatives does Novanecter support?",
+        "What CSR initiatives does Novanectar support?",
         "Can you tell me about your sustainability programs?"
     ],
     "partnerships": [
         "Is the company open to new business partnerships?",
         "Do you collaborate with other companies?",
-        "Can I become a partner with Novanecter?"
+        "Can I become a partner with Novanectar?"
     ],
     "job_openings": [
         "Do you have any job openings in the marketing department?",
         "Are there any vacancies in your company?",
-        "How can I apply for a job at Novanecter?"
+        "How can I apply for a job at Novanectar?"
     ],
     "b2b_services": [
         "Do you provide services for other businesses?",
