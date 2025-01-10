@@ -45,7 +45,7 @@ faq_data = {
     "b2b_services": "Yes, we offer enterprise-level solutions and services tailored to the specific needs of businesses across various industries.",
     "contract_terms": "Our enterprise contracts are customized to meet the unique requirements of each client. Contact us for more information.",
     "account_management": "You can update your business account details by logging into your account dashboard or contacting our support team.",
-    "invoice_inquiry": "You can download your invoices from your account dashboard, request a copy by emailing info@novanectar.co.in, or visit us at https://novanectar.co.in/testimonials for more information.",
+    "invoice_inquiry": "You can download your invoices from your account dashboard, request a copy by emailing info@novanectar.co.in, or visit us at https://novanectar.co.in/ for more information.",
     "feedback": "You can leave feedback on our website or directly reach out to our customer service team for more personalized feedback."
 }
 
