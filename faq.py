@@ -29,7 +29,7 @@ faq_data = {
     "pricing_details": "For pricing details, visit our website https://novanectar.co.in/ or contact our sales team at +91 89798 91703.",
     "service_warranty": "Novanectar offers a warranty for all services provided, including bug fixes and support for a defined period after project completion. Please contact us for specific terms.",
     "client_onboarding_process": "Our client onboarding process involves understanding your requirements, project scoping, team assignment, and establishing timelines. We guide you every step of the way.",
-    "payment_methods": "We accept payments via bank transfers, credit cards, and online payment systems like PayPal. For more details, contact our accounts team at accounts@novanectar.co.in.",
+    "payment_methods": "We accept payments via bank transfers, UPI transactions, credit cards, and online payment systems like PayPal. For more details, contact our accounts team at info@novanectar.co.in.",
     "project_management_tools": "We use industry-leading project management tools like Jira and Trello to ensure efficient collaboration, timely delivery, and transparent communication.",
     "post_launch_support": "We offer post-launch support, including maintenance and updates, to ensure your solution continues to perform optimally. Contact our support team for more details.",
     "client_testimonials": "Read what our clients say about us on our testimonials page at https://novanectar.co.in/testimonials.",
@@ -109,7 +109,8 @@ intent_phrases = {
         "What are the available payment options?",
         "What payment methods are supported?",
         "Can I pay through PayPal or credit card?",
-        "Which payment methods do you use?"
+        "Which payment methods do you use?",
+        "How can I transfer money using UPI?"
     ],
     "project_management_tools": [
         "What project management tools do you use?",
