@@ -1,0 +1,53 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ Chatbot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"> <!-- Link to CSS -->
+</head>
+<body>
+    <div class="container" align="center">
+        <h1>Welcome to Novanecter FAQ Chatbot</h1>
+        <p>Ask your questions below:</p>
+
+        <!-- Form for asking questions -->
+        <form id="faq-form">
+            <input type="text" id="question" name="question" placeholder="Ask a question" required>
+            <button type="submit">Submit</button>
+        </form>
+
+        <!-- Section to display the answer -->
+        <div id="answer"></div>
+    </div>
+
+    <script>
+        document.getElementById("faq-form").addEventListener("submit", function(event) {
+            event.preventDefault();  // Prevent the form from refreshing the page
+
+            // Get the question from the input field
+            var question = document.getElementById("question").value;
+
+            // Send the user query to the chatbot API
+            fetch('/chatbot', {
+                method: 'POST',  // Use POST method
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ query: question })  // Send the question as a JSON object
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Display the response from the chatbot API
+                document.getElementById("answer").innerHTML = `<p><strong>Answer:</strong> ${data.response}</p>`;
+            })
+            .catch(error => {
+                console.error("Error fetching the FAQ answer:", error);
+                document.getElementById("answer").innerHTML = "<p>Sorry, there was an error. Please try again.</p>";
+            });
+        });
+    </script>
+</body>
+</html>
+<!-- End of templates/index.html -->

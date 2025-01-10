@@ -1,0 +1,8 @@
+flask
+gunicorn
+spacy
+nltk
+gensim
+transformers
+sentence-transformers
+torch
