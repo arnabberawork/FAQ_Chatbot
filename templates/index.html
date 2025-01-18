@@ -1,53 +1,103 @@
-<!-- templates/index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FAQ Chatbot</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"> <!-- Link to CSS -->
+    <title>NovaNectar</title>
+    <link rel="stylesheet" href="static/style.css">
 </head>
 <body>
-    <div class="container" align="center">
-        <h1>Novanectar FAQ Assistant</h1>
-        <p> Need Help? Find Answers Here : </p>
+    <!-- Existing NovaNectar content -->
 
-        <!-- Form for asking questions -->
-        <form id="faq-form">
-            <input type="text" id="question" name="question" placeholder="Ask a question" required>
-            <button type="submit">Submit</button>
-        </form>
+    <!-- Sample Image -->
+    <img src="static/image.png" alt="Sample Image" class="sample-image">
 
-        <!-- Section to display the answer -->
-        <div id="answer"></div>
+    <!-- Chatbot Floating Button -->
+    <button class="chatbot-toggle">💬</button>
+
+    <!-- Chatbot Container -->
+    <div class="chatbot-container">
+        <div class="chatbot-header">FAQ Chatbot</div>
+        <div class="chatbot-messages"></div>
+        <div class="chatbot-loader">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="chatbot-footer">
+            <input type="text" class="chatbot-input" placeholder="Type your query here...">
+            <button class="chatbot-send">Send</button>
+        </div>
     </div>
 
     <script>
-        document.getElementById("faq-form").addEventListener("submit", function(event) {
-            event.preventDefault();  // Prevent the form from refreshing the page
+        const toggleButton = document.querySelector('.chatbot-toggle');
+        const chatbotContainer = document.querySelector('.chatbot-container');
+        const sendButton = document.querySelector('.chatbot-send');
+        const inputField = document.querySelector('.chatbot-input');
+        const messagesContainer = document.querySelector('.chatbot-messages');
+        const loader = document.querySelector('.chatbot-loader');
 
-            // Get the question from the input field
-            var question = document.getElementById("question").value;
+        // Toggle Chatbot visibility
+        toggleButton.addEventListener('click', () => {
+            chatbotContainer.style.display = chatbotContainer.style.display === 'flex' ? 'none' : 'flex';
+        });
 
-            // Send the user query to the chatbot API
-            fetch('/chatbot', {
-                method: 'POST',  // Use POST method
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ query: question })  // Send the question as a JSON object
-            })
-            .then(response => response.json())
-            .then(data => {
-                // Display the response from the chatbot API
-                document.getElementById("answer").innerHTML = `<p><strong>Answer:</strong> ${data.response}</p>`;
-            })
-            .catch(error => {
-                console.error("Error fetching the FAQ answer:", error);
-                document.getElementById("answer").innerHTML = "<p>Sorry, there was an error. Please try again.</p>";
-            });
+        // Function to add a message to the chat
+        function addMessage(message, isUser = false) {
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `chatbot-message ${isUser ? 'user' : 'bot'}`;
+            messageDiv.textContent = message;
+            messagesContainer.appendChild(messageDiv);
+            messagesContainer.scrollTop = messagesContainer.scrollHeight;
+        }
+
+        // Show loader
+        function showLoader() {
+            loader.style.display = 'block';
+        }
+
+        // Hide loader
+        function hideLoader() {
+            loader.style.display = 'none';
+        }
+
+        // Handle sending the query
+        sendButton.addEventListener('click', async () => {
+            const userQuery = inputField.value.trim();
+            if (!userQuery) return;
+            addMessage(userQuery, true);
+            inputField.value = '';
+
+            // Show loader
+            showLoader();
+
+            // Send the query to the Flask server
+            try {
+                const response = await fetch('/chatbot', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ query: userQuery })
+                });
+                const data = await response.json();
+
+                // Hide loader
+                hideLoader();
+
+                // Add the chatbot response
+                addMessage(data.response);
+            } catch (error) {
+                hideLoader();
+                addMessage('Something went wrong. Please try again later.');
+            }
+        });
+
+        // Allow Enter key to send the message
+        inputField.addEventListener('keypress', (event) => {
+            if (event.key === 'Enter') {
+                sendButton.click();
+            }
         });
     </script>
 </body>
 </html>
-<!-- End of templates/index.html -->
